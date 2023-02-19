@@ -2,10 +2,12 @@ Simple autohotkey v1 completion
 
 ![image](https://user-images.githubusercontent.com/63406944/219892109-61fb40e1-59eb-4562-92c1-c0f04c8bf98c.png)
 
-# Installation
-1. `use('DasGandlaf/cmp-nvim-autohotkey')`
-2. `require('cmp-nvim-autohotkey')`
-3.
+## Installation
+1. Install null-ls (Language server)
+2. Install nvim-cmp (https://github.com/hrsh7th/nvim-cmp)
+3. `use('DasGandlaf/nvim-autohotkey')`
+4. `require('nvim-autohotkey')`
+5.
 ``` lua
 cmp.setup.filetype({ 'autohotkey' }, {
   sources = { { name = 'autohotkey' } },
