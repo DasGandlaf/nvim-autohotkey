@@ -19,7 +19,7 @@ cmp.setup.filetype({ 'autohotkey' }, {
 ## Credit
 Docs from here: https://www.autohotkey.com/docs/v1/lib/
 
-(Took html, online converter to remove html, manually converted to json)
+(Took html, online converter to remove html, manually converted to lua)
 
 `usefulStuff` folder contents from here: https://www.autohotkey.com/boards/viewtopic.php?f=7&t=27321&p=131642#p131642
 
