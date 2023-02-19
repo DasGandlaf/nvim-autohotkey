@@ -1,0 +1,206 @@
+==================================================
+
+syntax files for AutoHotkey v1.1.28.02
+
+==================================================
+
+links (sources):
+
+[original syntax files]
+Index of /download/1.0
+https://autohotkey.com/download/1.0/
+AutoHotkey104805.zip
+https://autohotkey.com/download/1.0/AutoHotkey104805.zip
+AutoHotkey104805.zip\Extras\Editors\Syntax
+
+[control flow statements/commands/directives/functions]
+Alphabetical Command and Function Index
+https://autohotkey.com/docs/commands/
+Functions
+https://autohotkey.com/docs/Functions.htm#BuiltIn
+list of every command/function/variable from across all versions - AutoHotkey Community
+https://autohotkey.com/boards/viewtopic.php?f=7&t=27321&p=131642#p131642
+
+[variables]
+Variables and Expressions
+https://autohotkey.com/docs/Variables.htm#BuiltIn
+Loop (files & folders)
+https://autohotkey.com/docs/commands/LoopFile.htm
+Loop (registry)
+https://autohotkey.com/docs/commands/LoopReg.htm
+
+[keys]
+List of Keys and Mouse/Joystick Buttons for Hotkeys and Macros
+https://autohotkey.com/docs/KeyList.htm
+
+[keywords]
+Variables and Expressions
+https://autohotkey.com/docs/Variables.htm#Operators
+WinTitle & Last Found Window
+https://autohotkey.com/docs/misc/WinTitle.htm
+AutoHotkey Scripts and Macros
+https://autohotkey.com/docs/Scripts.htm#continuation
+
+==================================================
+
+links (further information):
+
+[get text from syntax blocks]
+list of every command/function/variable from across all versions - AutoHotkey Community
+https://autohotkey.com/boards/viewtopic.php?f=7&t=27321&p=130479#p130479
+
+[get text from syntax blocks (related)]
+htm to txt, AutoHotkey Help (chm file) to txt - AutoHotkey Community
+https://autohotkey.com/boards/viewtopic.php?f=5&t=26402
+
+[issues with square brackets not appearing in text obtained from syntax blocks]
+[use innerHTML instead of innerText]
+Suggestions on documentation improvements - Page 18 - AutoHotkey Community
+https://autohotkey.com/boards/viewtopic.php?f=13&t=1434&p=203260#p203260
+
+==================================================
+
+notes (omitted commands/directives):
+
+[NamesCommands.txt]
+[not included (defunct AutoIt-related commands):]
+EndRepeat
+HideAutoItWin
+LeftClick
+LeftClickDrag
+Repeat
+RightClick
+RightClickDrag
+
+[NamesDirectives.txt]
+[not included (defunct AutoIt-related directive):]
+#AllowSameLineComments
+
+==================================================
+
+notes (Keywords.txt):
+
+[minimally updated to include:]
+ahk_exe, Loop Files, Loop Reg
+
+==================================================
+
+notes (AutoHotkey Basic syntax files):
+
+[lines from the AHK Basic version that might be worth bringing back:]
+If Var is [not] integer|float|number|digit|xdigit|alpha|upper|lower|alnum|space|time
+SetCapsLockState, On|Off|AlwaysOn|AlwaysOff
+
+==================================================
+
+notes (ZSyntaxRaw.txt):
+
+details of syntax lines that deviate from ZSyntaxRaw.txt
+
+[edited (replaced 'Same parameters as above'):]
+ControlSendRaw [, Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
+
+[edited (replaced 'same: if Var'):]
+IfEqual, Var, Value
+IfGreater, Var, Value
+IfGreaterOrEqual, Var, Value
+IfLess, Var, Value
+IfLessOrEqual, Var, Value
+IfNotEqual, Var, Value
+
+[edited (removed text before ' := '):]
+[(most functions)]
+
+[edited (removed text before ' := ' and leading space):]
+Trim(String, OmitChars := " `t")
+
+[added in (lines with comments removed):]
+Critical 50
+If Var
+StrSplit(String [, Delimiters, OmitChars, MaxParts := -1])
+
+[added in (commands/directives):]
+#Delimiter
+#DerefChar
+#LTrim
+Catch
+Click
+Until
+
+[added in (functions):]
+Array()
+ComObjParameter(VarType, Value [, Flags])
+Exception(Message [, What, Extra])
+Object()
+
+[added in (function version of object methods):]
+ObjClone(Object)
+ObjDelete(Object, FirstKey, LastKey)
+ObjDelete(Object, Key)
+ObjGetAddress(Object, Key)
+ObjGetCapacity(Object)
+ObjGetCapacity(Object, Key)
+ObjHasKey(Object, Key)
+ObjInsert(Object, Pos, Value1 [, Value2, ... ValueN ])
+ObjInsert(Object, StringOrObjectKey, Value)
+ObjInsert(Object, Value)
+ObjInsertAt(Object, Pos, Value1 [, Value2, ... ValueN])
+ObjLength(Object)
+ObjMaxIndex(Object)
+ObjMinIndex(Object)
+ObjNewEnum(Object)
+ObjPop(Object)
+ObjPush(Object, [ Value, Value2, ..., ValueN ])
+ObjRemove(Object, FirstKey, LastKey)
+ObjRemoveAt(Object, Pos [, Length])
+ObjSetCapacity(Object, Key, ByteSize)
+ObjSetCapacity(Object, MaxItems)
+
+[added in (IL/LV/SV/TV functions):]
+IL_Add(ImageListID, Filename [, IconNumber, ResizeNonIcon?])
+IL_Create([InitialCount, GrowCount, LargeIcons?])
+IL_Destroy(ImageListID)
+LV_Add([Options, Field1, Field2, ...])
+LV_Delete([RowNumber])
+LV_DeleteCol(ColumnNumber)
+LV_GetCount(["Selected | Column"])
+LV_GetNext([StartingRowNumber, "Checked | Focused"])
+LV_GetText(OutputVar, RowNumber [, ColumnNumber])
+LV_Insert(RowNumber [, Options, Col1, Col2, ...])
+LV_InsertCol(ColumnNumber [, Options, ColumnTitle])
+LV_Modify(RowNumber [, Options, NewCol1, NewCol2, ...])
+LV_ModifyCol([ColumnNumber, Options, ColumnTitle])
+LV_SetImageList(ImageListID [, 0|1|2])
+SB_SetIcon(Filename [, IconNumber, PartNumber])
+SB_SetParts([Width1, Width2, ... Width255])
+SB_SetText(NewText [, PartNumber, Style])
+TV_Add(Name, [ParentItemID, Options])
+TV_Delete([ItemID])
+TV_Get(ItemID, "Expand | Check | Bold")
+TV_GetChild(ParentItemID)
+TV_GetCount()
+TV_GetNext([ItemID, "Checked | Full"])
+TV_GetParent(ItemID)
+TV_GetPrev(ItemID)
+TV_GetSelection()
+TV_GetText(OutputVar, ItemID)
+TV_Modify(ItemID [, Options, NewName])
+TV_SetImageList(ImageListID [, 0|2])
+
+[taken out (directives):]
+#AllowSameLineComments
+
+[taken out (functions):]
+CtrlEvent(CtrlHwnd, GuiEvent, EventInfo, ErrLevel:="")
+ExitFunc(ExitReason, ExitCode)
+Function(Match, CalloutNumber, FoundPos, Haystack, NeedleRegEx)
+FunctionName(ItemName, ItemPos, MenuName)
+FunctionName(Type)
+GuiContextMenu(GuiHwnd, CtrlHwnd, EventInfo, IsRightClick, X, Y)
+GuiSize(GuiHwnd, EventInfo, Width, Height)
+MyCall(this, Name [, Params...])
+MyFunction(CtrlHwnd, GuiEvent, LinkIndex, HrefOrID)
+MyGet(this [, Key, Key2, ...])
+MySet(this [, Key, Key2, ...], Value)
+
+==================================================

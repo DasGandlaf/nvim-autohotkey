@@ -1,0 +1,39 @@
+#ClipboardTimeout Milliseconds
+#CommentFlag NewString
+#Delimiter
+#DerefChar
+#ErrorStdOut
+#EscapeChar NewChar
+#HotkeyInterval Milliseconds
+#HotkeyModifierTimeout Milliseconds
+#Hotstring EndChars NewChars
+#Hotstring NewOptions
+#Hotstring NoMouse
+#If [, Expression]
+#If [Expression]
+#IfTimeout Timeout
+#IfWinActive [WinTitle, WinText]
+#IfWinExist [WinTitle, WinText]
+#IfWinNotActive [WinTitle, WinText]
+#IfWinNotExist [WinTitle, WinText]
+#Include <LibName>
+#Include FileOrDirName
+#IncludeAgain FileOrDirName
+#InputLevel [Level]
+#InstallKeybdHook
+#InstallMouseHook
+#KeyHistory MaxEvents
+#LTrim
+#MaxHotkeysPerInterval Value
+#MaxMem Megabytes
+#MaxThreads Value
+#MaxThreadsBuffer On|Off
+#MaxThreadsPerHotkey Value
+#MenuMaskKey KeyName
+#NoEnv
+#NoTrayIcon
+#Persistent
+#SingleInstance [force|ignore|off]
+#UseHook [On|Off]
+#Warn [WarningType, WarningMode]
+#WinActivateForce

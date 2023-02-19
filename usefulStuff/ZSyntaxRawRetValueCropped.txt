@@ -1,0 +1,784 @@
+==================================================
+FileRead, OutputVar, *Pnnn Filename
+FileAppend [, Text, Filename, Encoding]
+==================================================
+ControlSend [, Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+Run, Target [, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID]
+==================================================
+Method syntax:
+class ClassName {
+    __Get([Key, Key2, ...])
+    __Set([Key, Key2, ...], Value)
+    __Call(Name [, Params...])
+}
+
+Function syntax:
+MyGet(this [, Key, Key2, ...])
+MySet(this [, Key, Key2, ...], Value)
+MyCall(this, Name [, Params...])
+
+{ __Get: Func("MyGet"), __Set: Func("MySet"), __Call: Func("MyCall") }
+==================================================
+AutoHotkey.exe /Debug[=SERVER:PORT] ...
+==================================================
+Asc(String)
+==================================================
+AutoTrim, On|Off
+==================================================
+{
+zero or more commands
+}
+==================================================
+BlockInput, Mode
+==================================================
+Break [, LoopLabel]
+==================================================
+Chr(Number)
+==================================================
+ClipWait [, SecondsToWait, 1]
+==================================================
+ComObjActive(CLSID)
+ComObject(VarType, Value [, Flags])
+ComObjMissing()
+
+ComObjEnwrap(DispPtr)
+ComObjUnwrap(ComObject)
+==================================================
+ComObjArray(VarType, Count1 [, Count2, ... Count8])
+==================================================
+ComObjConnect(ComObject [, Prefix])
+==================================================
+ComObjCreate(CLSID [, IID])
+==================================================
+ComObjError([Enable])
+==================================================
+ComObjFlags(ComObject [, NewFlags, Mask])
+==================================================
+ComObjGet(Name)
+==================================================
+ComObjQuery(ComObject, [SID,] IID)
+==================================================
+ComObjType(ComObject)
+ComObjType(ComObject, "Name")
+ComObjType(ComObject, "IID")
+ComObjType(ComObject, "Class")  ; Requires [v1.1.26+]
+ComObjType(ComObject, "CLSID")  ; Requires [v1.1.26+]
+==================================================
+ComObjValue(ComObject)
+==================================================
+Continue [, LoopLabel]
+==================================================
+Control, Cmd [, Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlClick [, Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText]
+==================================================
+ControlFocus [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlGet, OutputVar, Cmd [, Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlGetFocus, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlGetPos [, X, Y, Width, Height, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlGetText, OutputVar [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlMove, Control, X, Y, Width, Height [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+ControlSend [, Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlSendRaw: Same parameters as above.
+==================================================
+ControlSetText [, Control, NewText, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+CoordMode, ToolTip|Pixel|Mouse|Caret|Menu [, Screen|Window|Client]
+==================================================
+Critical [, Off]
+Critical 50 ; See bottom of remarks.
+==================================================
+DetectHiddenText, On|Off
+==================================================
+DetectHiddenWindows, On|Off
+==================================================
+DllCall("[DllFile\]Function" [, Type1, Arg1, Type2, Arg2, "Cdecl ReturnType"])
+==================================================
+Drive, Sub-command [, Drive, Value]
+==================================================
+DriveGet, OutputVar, Cmd [, Value]
+==================================================
+DriveSpaceFree, OutputVar, Path
+==================================================
+Edit
+==================================================
+Else
+==================================================
+EnvAdd, Var, Value [, TimeUnits]
+Var += Value [, TimeUnits]
+Var++
+==================================================
+EnvDiv, Var, Value
+==================================================
+EnvGet, OutputVar, EnvVarName
+==================================================
+EnvMult, Var, Value
+==================================================
+EnvSet, EnvVar, Value
+==================================================
+EnvSub, Var, Value [, TimeUnits]
+Var -= Value [, TimeUnits]
+Var--
+==================================================
+EnvUpdate
+==================================================
+Exit [, ExitCode]
+==================================================
+ExitApp [, ExitCode]
+==================================================
+FileAppend [, Text, Filename, Encoding]
+==================================================
+FileCopy, SourcePattern, DestPattern [, Flag]
+==================================================
+FileCopyDir, Source, Dest [, Flag]
+==================================================
+FileCreateDir, DirName
+==================================================
+FileCreateShortcut, Target, LinkFile [, WorkingDir, Args, Description, IconFile, ShortcutKey, IconNumber, RunState]
+==================================================
+FileDelete, FilePattern
+==================================================
+FileEncoding [, Encoding]
+==================================================
+FileExist(FilePattern)
+==================================================
+FileGetAttrib, OutputVar [, Filename]
+==================================================
+FileGetShortcut, LinkFile [, OutTarget, OutDir, OutArgs, OutDescription, OutIcon, OutIconNum, OutRunState]
+==================================================
+FileGetSize, OutputVar [, Filename, Units]
+==================================================
+FileGetTime, OutputVar [, Filename, WhichTime]
+==================================================
+FileGetVersion, OutputVar [, Filename]
+==================================================
+FileInstall, Source, Dest [, Flag]
+==================================================
+FileMove, SourcePattern, DestPattern [, Flag]
+==================================================
+FileMoveDir, Source, Dest [, Flag]
+==================================================
+FileOpen(Filename, Flags [, Encoding])
+==================================================
+FileRead, OutputVar, Filename
+==================================================
+FileReadLine, OutputVar, Filename, LineNum
+==================================================
+FileRecycle, FilePattern
+==================================================
+FileRecycleEmpty [, DriveLetter]
+==================================================
+FileRemoveDir, DirName [, Recurse?]
+==================================================
+FileSelectFile, OutputVar [, Options, RootDir\Filename, Prompt, Filter]
+==================================================
+FileSelectFolder, OutputVar [, StartingFolder, Options, Prompt]
+==================================================
+FileSetAttrib, Attributes [, FilePattern, OperateOnFolders?, Recurse?]
+==================================================
+FileSetTime [, YYYYMMDDHH24MISS, FilePattern, WhichTime, OperateOnFolders?, Recurse?]
+==================================================
+Finally Statement
+==================================================
+For Key [, Value] in Expression
+==================================================
+Format(FormatStr [, Values...])
+Flags Width .Precision ULT Type
+==================================================
+FormatTime, OutputVar [, YYYYMMDDHH24MISS, Format]
+==================================================
+Func(FunctionName)
+==================================================
+GetKeyName(Key)
+GetKeyVK(Key)
+GetKeySC(Key)
+==================================================
+GetKeyState, OutputVar, KeyName [, Mode]
+
+
+GetKeyState(KeyName [, Mode])
+==================================================
+Gosub, Label
+==================================================
+Goto, Label
+==================================================
+GroupActivate, GroupName [, R]
+==================================================
+GroupAdd, GroupName [, WinTitle, WinText, Label, ExcludeTitle, ExcludeText]
+==================================================
+GroupClose, GroupName [, A|R]
+==================================================
+GroupDeactivate, GroupName [, R]
+==================================================
+Gui, sub-command [, Param2, Param3, Param4]
+CtrlEvent(CtrlHwnd, GuiEvent, EventInfo, ErrLevel:="")
+GuiSize(GuiHwnd, EventInfo, Width, Height)
+GuiContextMenu(GuiHwnd, CtrlHwnd, EventInfo, IsRightClick, X, Y)
+==================================================
+GuiControl, Sub-command, ControlID [, Param3]
+==================================================
+GuiControlGet, OutputVar [, Sub-command, ControlID, Param4]
+==================================================
+MyFunction(CtrlHwnd, GuiEvent, LinkIndex, HrefOrID)
+==================================================
+Hotkey, KeyName [, Label, Options]
+Hotkey, IfWinActive/Exist [, WinTitle, WinText]
+Hotkey, If [, Expression]
+Hotkey, If, % FunctionObject
+==================================================
+Hotstring(String [, Replacement, OnOffToggle])
+Hotstring(NewOptions)
+Hotstring("EndChars" [, NewValue])
+Hotstring("MouseReset" [, NewValue])
+Hotstring("Reset")
+
+Hotstring("EndChars" [, NewValue])
+Hotstring("MouseReset" [, NewValue])
+Hotstring("Reset")
+Hotstring(NewOptions)
+==================================================
+if Var between LowerBound and UpperBound
+if Var not between LowerBound and UpperBound
+==================================================
+IfEqual, Var, Value (same: if Var = Value)
+IfNotEqual, Var, Value (same: if Var <> Value) (!= can be used in place of <>)
+IfLess, Var, Value (same: if Var < Value)
+IfLessOrEqual, Var, Value (same: if Var <= Value)
+IfGreater, Var, Value (same: if Var > Value)
+IfGreaterOrEqual, Var, Value (same: if Var >= Value)
+If Var ; If Var's contents are blank or 0, it is considered false. Otherwise, it is true.
+==================================================
+IfExist, FilePattern
+IfNotExist, FilePattern
+==================================================
+if (expression)
+==================================================
+if Var in MatchList
+if Var not in MatchList
+
+if Var contains MatchList
+if Var not contains MatchList
+==================================================
+IfInString, Var, SearchString
+IfNotInString, Var, SearchString
+==================================================
+if Var is Type
+if Var is not Type
+==================================================
+IfMsgBox, ButtonName
+==================================================
+ImageSearch, OutputVarX, OutputVarY, X1, Y1, X2, Y2, ImageFile
+==================================================
+IniDelete, Filename, Section [, Key]
+==================================================
+IniRead, OutputVar, Filename, Section, Key [, Default]
+IniRead, OutputVarSection, Filename, Section
+IniRead, OutputVarSectionNames, Filename
+==================================================
+IniWrite, Value, Filename, Section, Key
+IniWrite, Pairs, Filename, Section
+==================================================
+Input [, OutputVar, Options, EndKeys, MatchList]
+==================================================
+InputBox, OutputVar [, Title, Prompt, HIDE, Width, Height, X, Y, Font, Timeout, Default]
+==================================================
+InStr(Haystack, Needle [, CaseSensitive := false, StartingPos := 1, Occurrence := 1])
+==================================================
+IsByRef(ParameterVar)
+==================================================
+IsFunc(FunctionName)
+==================================================
+IsLabel(LabelName)
+==================================================
+IsObject(ObjectValue)
+==================================================
+KeyHistory
+==================================================
+KeyWait, KeyName [, Options]
+==================================================
+ListHotkeys
+==================================================
+ListLines [, On|Off]
+==================================================
+ListVars
+==================================================
+LoadPicture(Filename [, Options, ByRef ImageType])
+==================================================
+Loop [, Count]
+==================================================
+Loop, Files, FilePattern [, Mode]
+Loop, FilePattern [, IncludeFolders?, Recurse?]
+==================================================
+Loop, Parse, InputVar [, Delimiters, OmitChars]
+==================================================
+Loop, Read, InputFile [, OutputFile]
+==================================================
+Loop, Reg, KeyName [, Mode]
+Loop, RootKey [, Key, IncludeSubkeys?, Recurse?]
+==================================================
+Abs(Number)
+Ceil(Number)
+Exp(N)
+Floor(Number)
+Log(Number)
+Ln(Number)
+Max(Number1 [, Number2, ...])
+Min(Number1 [, Number2, ...])
+Mod(Dividend, Divisor)
+Round(Number [, N])
+Sqrt(Number)
+Sin(Number)
+Cos(Number)
+Tan(Number)
+ASin(Number)
+ACos(Number)
+ATan(Number)
+==================================================
+Menu, MenuName, Cmd [, P3, P4, P5]
+FunctionName(ItemName, ItemPos, MenuName)
+==================================================
+MenuGetHandle(MenuName)
+==================================================
+MenuGetName(Handle)
+==================================================
+MouseClick [, WhichButton, X, Y, ClickCount, Speed, D|U, R]
+==================================================
+MouseClickDrag, WhichButton, X1, Y1, X2, Y2 [, Speed, R]
+==================================================
+MouseGetPos [, OutputVarX, OutputVarY, OutputVarWin, OutputVarControl, 1|2|3]
+==================================================
+MouseMove, X, Y [, Speed, R]
+==================================================
+MsgBox, Text
+MsgBox [, Options, Title, Text, Timeout]
+==================================================
+NumGet(VarOrAddress [, Offset := 0][, Type := "UPtr"])
+==================================================
+0][, Type := "UPtr"])
+==================================================
+ObjAddRef(Ptr)
+ObjRelease(Ptr)
+==================================================
+ObjBindMethod(Obj, Method, Params)
+==================================================
+OnClipboardChange(Func [, AddRemove])
+FunctionName(Type)
+==================================================
+OnExit [, Label]
+OnExit(Func [, AddRemove])
+ExitFunc(ExitReason, ExitCode)
+==================================================
+OnMessage(MsgNumber [, Function, MaxThreads])
+OnMessage(MsgNumber, "FunctionName")
+OnMessage(MsgNumber, "")
+OnMessage(MsgNumber)
+
+OnMessage(MsgNumber, FuncObj)     ; Option 1
+OnMessage(MsgNumber, FuncObj, 1)  ; Option 2 (MaxThreads = 1)
+OnMessage(MsgNumber, FuncObj, -1)
+OnMessage(MsgNumber, FuncObj, 0)
+==================================================
+Ord(String)
+==================================================
+OutputDebug, Text
+==================================================
+#p::Pause ; Pressing Win+P once will pause the script. Pressing it again will unpause.
+Pause [, On|Off|Toggle, OperateOnUnderlyingThread?]
+==================================================
+PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB]
+==================================================
+PixelSearch, OutputVarX, OutputVarY, X1, Y1, X2, Y2, ColorID [, Variation, Fast|RGB]
+==================================================
+PostMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout]
+==================================================
+Process, Cmd [, PID-or-Name, Param3]
+==================================================
+SplashImage, Off
+SplashImage [, ImageFile, Options, SubText, MainText, WinTitle, FontName]
+
+Progress, Off
+Progress, ProgressParam1 [, SubText, MainText, WinTitle, FontName]
+==================================================
+Random, OutputVar [, Min, Max]
+Random, , NewSeed
+==================================================
+RegDelete, KeyName [, ValueName]
+RegDelete, RootKey, SubKey [, ValueName]
+==================================================
+RegExMatch(Haystack, NeedleRegEx [, OutputVar, StartingPosition := 1])
+==================================================
+RegExReplace(Haystack, NeedleRegEx [, Replacement := "", OutputVarCount := "", Limit := -1, StartingPosition := 1])
+==================================================
+RegisterCallback("FunctionName" [, Options := "", ParamCount := FormalCount, EventInfo := Address])
+==================================================
+RegRead, OutputVar, KeyName [, ValueName]
+RegRead, OutputVar, RootKey, SubKey [, ValueName]
+==================================================
+RegWrite, ValueType, KeyName [, ValueName, Value]
+RegWrite, ValueType, RootKey, SubKey [, ValueName, Value]
+==================================================
+Reload
+==================================================
+Return [, Expression]
+==================================================
+Run, Target [, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID]
+RunWait, Target [, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID]
+==================================================
+RunAs [, User, Password, Domain]
+==================================================
+Send Keys
+SendRaw Keys
+SendInput Keys
+SendPlay Keys
+SendEvent Keys
+==================================================
+SendLevel, Level
+==================================================
+SendMode Input|Play|Event|InputThenPlay
+==================================================
+SetBatchLines, 20ms
+SetBatchLines, LineCount
+==================================================
+SetControlDelay, Delay
+==================================================
+SetDefaultMouseSpeed, Speed
+==================================================
+SetEnv, Var, Value
+Var = Value
+==================================================
+expression
+==================================================
+SetFormat, NumberType, Format
+==================================================
+SetKeyDelay [, Delay, PressDuration, Play]
+==================================================
+SetMouseDelay, Delay [, Play]
+==================================================
+SetCapsLockState [, State]
+SetNumLockState [, State]
+SetScrollLockState [, State]
+==================================================
+SetRegView, RegView
+==================================================
+SetStoreCapsLockMode, On|Off
+==================================================
+SetTimer [, Label, Period|On|Off|Delete, Priority]
+==================================================
+SetTitleMatchMode, MatchMode
+SetTitleMatchMode, Fast|Slow
+==================================================
+SetWinDelay, Delay
+==================================================
+SetWorkingDir, DirName
+==================================================
+Shutdown, Code
+==================================================
+Sleep, DelayInMilliseconds
+==================================================
+Sort, VarName [, Options]
+==================================================
+SoundBeep [, Frequency, Duration]
+==================================================
+SoundGet, OutputVar [, ComponentType, ControlType, DeviceNumber]
+==================================================
+SoundGetWaveVolume, OutputVar [, DeviceNumber]
+==================================================
+SoundPlay, Filename [, wait]
+==================================================
+SoundSet, NewSetting [, ComponentType, ControlType, DeviceNumber]
+==================================================
+SoundSetWaveVolume, Percent [, DeviceNumber]
+==================================================
+SplashTextOff
+SplashTextOn [, Width, Height, Title, Text]
+==================================================
+SplitPath, InputVar [, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive]
+==================================================
+StatusBarGetText, OutputVar [, Part#, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+StatusBarWait [, BarText, Seconds, Part#, WinTitle, WinText, Interval, ExcludeTitle, ExcludeText]
+==================================================
+StringCaseSense, On|Off|Locale
+==================================================
+StringGetPos, OutputVar, InputVar, SearchText [, L#|R#, Offset]
+==================================================
+StringLeft, OutputVar, InputVar, Count
+StringRight, OutputVar, InputVar, Count
+==================================================
+StringLen, OutputVar, InputVar
+StrLen(String)
+==================================================
+StringLower, OutputVar, InputVar [, T]
+StringUpper, OutputVar, InputVar [, T]
+==================================================
+StringMid, OutputVar, InputVar, StartChar [, Count, L]
+==================================================
+StringReplace, OutputVar, InputVar, SearchText [, ReplaceText, ReplaceAll?]
+StrReplace(Haystack, SearchText [, ReplaceText, OutputVarCount, Limit := -1])
+==================================================
+StringSplit, OutputArray, InputVar [, Delimiters, OmitChars]
+
+StrSplit(String [, Delimiters, OmitChars])
+StrSplit(String [, Delimiters, OmitChars, MaxParts := -1])  ; [v1.1.28+]
+==================================================
+StringTrimLeft, OutputVar, InputVar, Count
+StringTrimRight, OutputVar, InputVar, Count
+==================================================
+None])
+None])
+None])
+==================================================
+SubStr(String, StartingPos [, Length])
+==================================================
+Suspend [, Mode]
+==================================================
+SysGet, OutputVar, Sub-command [, Param3]
+==================================================
+Thread, NoTimers [, false]
+Thread, Priority, n
+Thread, Interrupt [, Duration, LineCount]
+==================================================
+Throw [, Expression]
+==================================================
+ToolTip [, Text, X, Y, WhichToolTip]
+==================================================
+Transform, OutputVar, Cmd, Value1 [, Value2]
+==================================================
+TrayTip [, Title, Text, Seconds, Options]
+==================================================
+ Trim(String, OmitChars := " `t")
+LTrim(String, OmitChars := " `t")
+RTrim(String, OmitChars := " `t")
+==================================================
+Try Statement
+==================================================
+Loop {
+    ...
+} Until Expression
+==================================================
+UrlDownloadToFile, URL, Filename
+==================================================
+VarSetCapacity(TargetVar [, RequestedCapacity, FillByte])
+==================================================
+While Expression
+While(Expression)
+==================================================
+WinActivate [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinActivateBottom [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+IfWinActive [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+IfWinNotActive [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+
+WinActive(WinTitle [, WinText, ExcludeTitle, ExcludeText])
+==================================================
+WinClose [, WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]
+==================================================
+IfWinExist [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+IfWinNotExist [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+
+WinExist(WinTitle [, WinText, ExcludeTitle, ExcludeText])
+==================================================
+WinGet, OutputVar [, Cmd, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinGetActiveStats, Title, Width, Height, X, Y
+==================================================
+WinGetActiveTitle, OutputVar
+==================================================
+WinGetClass, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinGetPos [, X, Y, Width, Height, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinGetText, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinGetTitle, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinHide [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinKill [, WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]
+==================================================
+WinMaximize [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinMenuSelectItem, WinTitle, WinText, Menu [, SubMenu1, SubMenu2, SubMenu3, SubMenu4, SubMenu5, SubMenu6, ExcludeTitle, ExcludeText]
+==================================================
+WinMinimize [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinMinimizeAll
+WinMinimizeAllUndo
+==================================================
+WinMove, X, Y
+WinMove, WinTitle, WinText, X, Y [, Width, Height, ExcludeTitle, ExcludeText]
+==================================================
+WinRestore [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinSet, Attribute, Value [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinSetTitle, NewTitle
+WinSetTitle, WinTitle, WinText, NewTitle [, ExcludeTitle, ExcludeText]
+==================================================
+WinShow [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+==================================================
+WinWait [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+==================================================
+WinWaitActive [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+WinWaitNotActive [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+==================================================
+WinWaitClose [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+==================================================
+#AllowSameLineComments
+==================================================
+#ClipboardTimeout Milliseconds
+==================================================
+#CommentFlag NewString
+==================================================
+#ErrorStdOut
+==================================================
+#EscapeChar NewChar
+==================================================
+#HotkeyInterval Milliseconds
+==================================================
+#HotkeyModifierTimeout Milliseconds
+==================================================
+#Hotstring NoMouse
+#Hotstring EndChars NewChars
+#Hotstring NewOptions
+==================================================
+#If [Expression]
+==================================================
+#IfTimeout Timeout
+==================================================
+#IfWinActive [WinTitle, WinText]
+#IfWinExist [WinTitle, WinText]
+#IfWinNotActive [WinTitle, WinText]
+#IfWinNotExist [WinTitle, WinText]
+#If [, Expression]
+==================================================
+#Include FileOrDirName
+#Include <LibName>
+#IncludeAgain FileOrDirName
+==================================================
+#InputLevel [Level]
+==================================================
+#InstallKeybdHook
+==================================================
+#InstallMouseHook
+==================================================
+#KeyHistory MaxEvents
+==================================================
+#MaxHotkeysPerInterval Value
+==================================================
+#MaxMem Megabytes
+==================================================
+#MaxThreads Value
+==================================================
+#MaxThreadsBuffer On|Off
+==================================================
+#MaxThreadsPerHotkey Value
+==================================================
+#MenuMaskKey KeyName
+==================================================
+#NoEnv
+==================================================
+#NoTrayIcon
+==================================================
+#Persistent
+==================================================
+#SingleInstance [force|ignore|off]
+==================================================
+#UseHook [On|Off]
+==================================================
+#Warn [WarningType, WarningMode]
+==================================================
+#WinActivateForce
+==================================================
+HBITMAP:bitmap-handle
+HICON:icon-handle
+==================================================
+LabelName:
+==================================================
+Function(Match, CalloutNumber, FoundPos, Haystack, NeedleRegEx)
+{
+    ...
+}
+==================================================
+Enum.Next(OutputVar1 [, OutputVar2, ...])
+==================================================
+File.Read([Characters])
+File.Write(String)
+File.ReadLine()
+File.WriteLine([String])
+File.ReadNumType()
+File.WriteNumType(Num)
+File.RawRead(VarOrAddress, Bytes)
+File.RawWrite(VarOrAddress, Bytes)
+
+0])
+Distance
+Distance
+
+
+File.Tell()
+File.Position
+File.Pos
+
+File.Length
+NewSize
+File.AtEOF
+File.Close()
+File.Encoding
+NewEncoding
+File.__Handle
+==================================================
+Func.Call(Param1, Param2, ...)  ; Requires [v1.1.19+]
+Func.(Param1, Param2, ...)  ; Old form - deprecated
+
+Func.Bind(Param1, Param2, ...)
+Func.Name
+Func.IsBuiltIn
+Func.IsVariadic
+Func.MinParams
+Func.MaxParams
+Func.IsByRef([ParamIndex])
+Func.IsOptional([ParamIndex])
+==================================================
+Object.InsertAt(Pos, Value1 [, Value2, ... ValueN])
+Object.RemoveAt(Pos [, Length])
+Object.Push([ Value, Value2, ..., ValueN ])
+Object.Pop()
+
+Object.Delete(Key)
+Object.Delete(FirstKey, LastKey)
+
+
+Object.MinIndex()
+Object.MaxIndex()
+
+Object.Length()
+
+Object.SetCapacity(MaxItems)
+Object.SetCapacity(Key, ByteSize)
+
+
+Object.GetCapacity()
+Object.GetCapacity(Key)
+
+Object.GetAddress(Key)
+Object._NewEnum()
+Object.HasKey(Key)
+Object.Clone()
+ObjRawSet(Object, Key, Value)
+
+Object.Insert(Pos, Value1 [, Value2, ... ValueN ])
+Object.Insert(Value)
+Object.Insert(StringOrObjectKey, Value)
+
+Object.Remove(FirstKey, LastKey)
+==================================================

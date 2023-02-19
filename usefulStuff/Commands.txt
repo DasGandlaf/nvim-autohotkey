@@ -1,0 +1,203 @@
+AutoTrim, On|Off
+BlockInput, Mode
+Click
+ClipWait [, SecondsToWait, 1]
+Control, Cmd [, Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlClick [, Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText]
+ControlFocus [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlGet, OutputVar, Cmd [, Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlGetFocus, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlGetPos [, X, Y, Width, Height, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlGetText, OutputVar [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlMove, Control, X, Y, Width, Height [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlSend [, Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlSendRaw [, Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]
+ControlSetText [, Control, NewText, WinTitle, WinText, ExcludeTitle, ExcludeText]
+CoordMode, ToolTip|Pixel|Mouse|Caret|Menu [, Screen|Window|Client]
+Critical 50
+Critical [, Off]
+DetectHiddenText, On|Off
+DetectHiddenWindows, On|Off
+Drive, Sub-command [, Drive, Value]
+DriveGet, OutputVar, Cmd [, Value]
+DriveSpaceFree, OutputVar, Path
+Edit
+EnvAdd, Var, Value [, TimeUnits]
+EnvDiv, Var, Value
+EnvGet, OutputVar, EnvVarName
+EnvMult, Var, Value
+EnvSet, EnvVar, Value
+EnvSub, Var, Value [, TimeUnits]
+EnvUpdate
+Exit [, ExitCode]
+ExitApp [, ExitCode]
+FileAppend [, Text, Filename, Encoding]
+FileCopy, SourcePattern, DestPattern [, Flag]
+FileCopyDir, Source, Dest [, Flag]
+FileCreateDir, DirName
+FileCreateShortcut, Target, LinkFile [, WorkingDir, Args, Description, IconFile, ShortcutKey, IconNumber, RunState]
+FileDelete, FilePattern
+FileEncoding [, Encoding]
+FileGetAttrib, OutputVar [, Filename]
+FileGetShortcut, LinkFile [, OutTarget, OutDir, OutArgs, OutDescription, OutIcon, OutIconNum, OutRunState]
+FileGetSize, OutputVar [, Filename, Units]
+FileGetTime, OutputVar [, Filename, WhichTime]
+FileGetVersion, OutputVar [, Filename]
+FileInstall, Source, Dest [, Flag]
+FileMove, SourcePattern, DestPattern [, Flag]
+FileMoveDir, Source, Dest [, Flag]
+FileRead, OutputVar, Filename
+FileReadLine, OutputVar, Filename, LineNum
+FileRecycle, FilePattern
+FileRecycleEmpty [, DriveLetter]
+FileRemoveDir, DirName [, Recurse?]
+FileSelectFile, OutputVar [, Options, RootDir\Filename, Prompt, Filter]
+FileSelectFolder, OutputVar [, StartingFolder, Options, Prompt]
+FileSetAttrib, Attributes [, FilePattern, OperateOnFolders?, Recurse?]
+FileSetTime [, YYYYMMDDHH24MISS, FilePattern, WhichTime, OperateOnFolders?, Recurse?]
+FormatTime, OutputVar [, YYYYMMDDHH24MISS, Format]
+GetKeyState, OutputVar, KeyName [, Mode]
+GroupActivate, GroupName [, R]
+GroupAdd, GroupName [, WinTitle, WinText, Label, ExcludeTitle, ExcludeText]
+GroupClose, GroupName [, A|R]
+GroupDeactivate, GroupName [, R]
+Gui, sub-command [, Param2, Param3, Param4]
+GuiControl, Sub-command, ControlID [, Param3]
+GuiControlGet, OutputVar [, Sub-command, ControlID, Param4]
+Hotkey, If [, Expression]
+Hotkey, If, % FunctionObject
+Hotkey, IfWinActive/Exist [, WinTitle, WinText]
+Hotkey, KeyName [, Label, Options]
+ImageSearch, OutputVarX, OutputVarY, X1, Y1, X2, Y2, ImageFile
+IniDelete, Filename, Section [, Key]
+IniRead, OutputVar, Filename, Section, Key [, Default]
+IniRead, OutputVarSection, Filename, Section
+IniRead, OutputVarSectionNames, Filename
+IniWrite, Pairs, Filename, Section
+IniWrite, Value, Filename, Section, Key
+Input [, OutputVar, Options, EndKeys, MatchList]
+InputBox, OutputVar [, Title, Prompt, HIDE, Width, Height, X, Y, Font, Timeout, Default]
+KeyHistory
+KeyWait, KeyName [, Options]
+ListHotkeys
+ListLines [, On|Off]
+ListVars
+Menu, MenuName, Cmd [, P3, P4, P5]
+MouseClick [, WhichButton, X, Y, ClickCount, Speed, D|U, R]
+MouseClickDrag, WhichButton, X1, Y1, X2, Y2 [, Speed, R]
+MouseGetPos [, OutputVarX, OutputVarY, OutputVarWin, OutputVarControl, 1|2|3]
+MouseMove, X, Y [, Speed, R]
+MsgBox [, Options, Title, Text, Timeout]
+MsgBox, Text
+OnExit [, Label]
+OutputDebug, Text
+Pause [, On|Off|Toggle, OperateOnUnderlyingThread?]
+PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB]
+PixelSearch, OutputVarX, OutputVarY, X1, Y1, X2, Y2, ColorID [, Variation, Fast|RGB]
+PostMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
+Process, Cmd [, PID-or-Name, Param3]
+Progress, Off
+Progress, ProgressParam1 [, SubText, MainText, WinTitle, FontName]
+Random, , NewSeed
+Random, OutputVar [, Min, Max]
+RegDelete, KeyName [, ValueName]
+RegDelete, RootKey, SubKey [, ValueName]
+RegRead, OutputVar, KeyName [, ValueName]
+RegRead, OutputVar, RootKey, SubKey [, ValueName]
+RegWrite, ValueType, KeyName [, ValueName, Value]
+RegWrite, ValueType, RootKey, SubKey [, ValueName, Value]
+Reload
+Run, Target [, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID]
+RunAs [, User, Password, Domain]
+RunWait, Target [, WorkingDir, Max|Min|Hide|UseErrorLevel, OutputVarPID]
+Send Keys
+SendEvent Keys
+SendInput Keys
+SendLevel, Level
+SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout]
+SendMode Input|Play|Event|InputThenPlay
+SendPlay Keys
+SendRaw Keys
+SetBatchLines, 20ms
+SetBatchLines, LineCount
+SetCapsLockState [, State]
+SetControlDelay, Delay
+SetDefaultMouseSpeed, Speed
+SetEnv, Var, Value
+SetFormat, NumberType, Format
+SetKeyDelay [, Delay, PressDuration, Play]
+SetMouseDelay, Delay [, Play]
+SetNumLockState [, State]
+SetRegView, RegView
+SetScrollLockState [, State]
+SetStoreCapsLockMode, On|Off
+SetTimer [, Label, Period|On|Off|Delete, Priority]
+SetTitleMatchMode, Fast|Slow
+SetTitleMatchMode, MatchMode
+SetWinDelay, Delay
+SetWorkingDir, DirName
+Shutdown, Code
+Sleep, DelayInMilliseconds
+Sort, VarName [, Options]
+SoundBeep [, Frequency, Duration]
+SoundGet, OutputVar [, ComponentType, ControlType, DeviceNumber]
+SoundGetWaveVolume, OutputVar [, DeviceNumber]
+SoundPlay, Filename [, wait]
+SoundSet, NewSetting [, ComponentType, ControlType, DeviceNumber]
+SoundSetWaveVolume, Percent [, DeviceNumber]
+SplashImage [, ImageFile, Options, SubText, MainText, WinTitle, FontName]
+SplashImage, Off
+SplashTextOff
+SplashTextOn [, Width, Height, Title, Text]
+SplitPath, InputVar [, OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive]
+StatusBarGetText, OutputVar [, Part#, WinTitle, WinText, ExcludeTitle, ExcludeText]
+StatusBarWait [, BarText, Seconds, Part#, WinTitle, WinText, Interval, ExcludeTitle, ExcludeText]
+StringCaseSense, On|Off|Locale
+StringGetPos, OutputVar, InputVar, SearchText [, L#|R#, Offset]
+StringLeft, OutputVar, InputVar, Count
+StringLen, OutputVar, InputVar
+StringLower, OutputVar, InputVar [, T]
+StringMid, OutputVar, InputVar, StartChar [, Count, L]
+StringReplace, OutputVar, InputVar, SearchText [, ReplaceText, ReplaceAll?]
+StringRight, OutputVar, InputVar, Count
+StringSplit, OutputArray, InputVar [, Delimiters, OmitChars]
+StringTrimLeft, OutputVar, InputVar, Count
+StringTrimRight, OutputVar, InputVar, Count
+StringUpper, OutputVar, InputVar [, T]
+Suspend [, Mode]
+SysGet, OutputVar, Sub-command [, Param3]
+Thread, Interrupt [, Duration, LineCount]
+Thread, NoTimers [, false]
+Thread, Priority, n
+ToolTip [, Text, X, Y, WhichToolTip]
+Transform, OutputVar, Cmd, Value1 [, Value2]
+TrayTip [, Title, Text, Seconds, Options]
+UrlDownloadToFile, URL, Filename
+WinActivate [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinActivateBottom [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinClose [, WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]
+WinGet, OutputVar [, Cmd, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinGetActiveStats, Title, Width, Height, X, Y
+WinGetActiveTitle, OutputVar
+WinGetClass, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinGetPos [, X, Y, Width, Height, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinGetText, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinGetTitle, OutputVar [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinHide [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinKill [, WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]
+WinMaximize [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinMenuSelectItem, WinTitle, WinText, Menu [, SubMenu1, SubMenu2, SubMenu3, SubMenu4, SubMenu5, SubMenu6, ExcludeTitle, ExcludeText]
+WinMinimize [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinMinimizeAll
+WinMinimizeAllUndo
+WinMove, WinTitle, WinText, X, Y [, Width, Height, ExcludeTitle, ExcludeText]
+WinMove, X, Y
+WinRestore [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinSet, Attribute, Value [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinSetTitle, NewTitle
+WinSetTitle, WinTitle, WinText, NewTitle [, ExcludeTitle, ExcludeText]
+WinShow [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+WinWait [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+WinWaitActive [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+WinWaitClose [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]
+WinWaitNotActive [, WinTitle, WinText, Seconds, ExcludeTitle, ExcludeText]

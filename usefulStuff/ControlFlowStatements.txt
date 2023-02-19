@@ -1,0 +1,46 @@
+Break [, LoopLabel]
+Catch
+Continue [, LoopLabel]
+Else
+Finally Statement
+For Key [, Value] in Expression
+Gosub, Label
+Goto, Label
+if (expression)
+If Var
+if Var between LowerBound and UpperBound
+if Var contains MatchList
+if Var in MatchList
+if Var is not Type
+if Var is Type
+if Var not between LowerBound and UpperBound
+if Var not contains MatchList
+if Var not in MatchList
+IfEqual, Var, Value
+IfExist, FilePattern
+IfGreater, Var, Value
+IfGreaterOrEqual, Var, Value
+IfInString, Var, SearchString
+IfLess, Var, Value
+IfLessOrEqual, Var, Value
+IfMsgBox, ButtonName
+IfNotEqual, Var, Value
+IfNotExist, FilePattern
+IfNotInString, Var, SearchString
+IfWinActive [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+IfWinExist [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+IfWinNotActive [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+IfWinNotExist [, WinTitle, WinText, ExcludeTitle, ExcludeText]
+Loop [, Count]
+Loop, FilePattern [, IncludeFolders?, Recurse?]
+Loop, Files, FilePattern [, Mode]
+Loop, Parse, InputVar [, Delimiters, OmitChars]
+Loop, Read, InputFile [, OutputFile]
+Loop, Reg, KeyName [, Mode]
+Loop, RootKey [, Key, IncludeSubkeys?, Recurse?]
+Return [, Expression]
+Throw [, Expression]
+Try Statement
+Until
+While Expression
+While(Expression)
