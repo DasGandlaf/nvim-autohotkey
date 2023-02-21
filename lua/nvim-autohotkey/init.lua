@@ -49,8 +49,6 @@ cmpAhkSource.setup = function()
   cmp.register_source('autohotkey', source.new())
 end
 
-cmpAhkSource.setup()
-
 autocmdId = vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'autohotkey' },
   callback = cmpAhkSource.setup,
