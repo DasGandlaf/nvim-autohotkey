@@ -54,9 +54,11 @@ autocmdId = vim.api.nvim_create_autocmd('FileType', {
   callback = cmpAhkSource.setup,
 })
 
+-- ######### Null-ls
+local null_ls = require('null-ls')
+
 -- Hover Support
 
-local null_ls = require('null-ls')
 local hoverItems = require('nvim-autohotkey.hover.hoverItems')
 
 local hover = {
@@ -81,3 +83,39 @@ local hover = {
 }
 
 null_ls.register(hover)
+
+-- Code Actions
+
+-- Find in ahk docs
+local function docs_url(docs_for)
+  return 'https://www.autohotkey.com/docs/v1/lib/'..docs_for..'.htm'
+end
+
+-- Not sure if this actually works on unix or macos, I am on windows
+local function open_url(url)
+  local OS = package.config:sub(1,1) == "\\" and "win" or "unix"
+  if OS == "unix" then
+    vim.cmd('silent! !open "" "'..url..'"')
+  else
+    vim.cmd('silent! !start "" "'..url..'"')
+  end
+end
+
+local find_in_docs = {
+  method = null_ls.methods.CODE_ACTION,
+  filetypes = { 'autohotkey' },
+  generator = {
+    fn = function()
+      return {
+        {
+          title = "Find word under cursor in docs",
+          action = function()
+            open_url(docs_url(vim.fn.expand('<cword>'):lower()))
+          end
+        }
+      }
+    end,
+  },
+}
+
+null_ls.register(find_in_docs)
