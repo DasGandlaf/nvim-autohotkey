@@ -64,10 +64,16 @@ local hover = {
   filetypes = { 'autohotkey' },
   generator = {
     fn = function()
-      local item = hoverItems[vim.fn.expand('<cword>')]
+      local item = hoverItems[vim.fn.expand('<cword>'):lower()]
       local hover = {}
       if item ~= nil then
-        table.insert(hover, item)
+        if type(item) == "table" then
+          for _, value in ipairs(item) do
+            table.insert(hover, value)
+          end
+        else
+          table.insert(hover, item)
+        end
       end
       return hover
     end,
